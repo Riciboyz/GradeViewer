@@ -2,15 +2,12 @@
     <div class="navbar-start">
         <a href="/" class="btn btn-ghost text-xl items-center"> <img src="views\partials\logo.png" class="w-[30px]"
                 alt="Stashly">
-            Stashly</a>
+            Grade Viewer</a>
     </div>
     <div class="navbar-center">
-        <?php if (Validator::Role('Admin')): ?>
-            <a href="/inventory" class="btn btn-ghost">Inventory</a>
-            <a href="/products" class="btn btn-ghost">Products</a>
-            <a href="/users" class="btn btn-ghost">Admin</a>
+        <?php if (Validator::Role('teacher')): ?>
+
         <?php endif; ?>
-        <a href="/orders" class="btn btn-ghost">Orders</a>
     </div>
     <div class="navbar-end">
         <?php if (isset($_SESSION['logged_in'])): ?>
@@ -22,10 +19,9 @@
                             class="badge badge-xs <?php echo $_SESSION['user_role'] === 'Worker' ? 'badge-primary' : 'badge-warning' ?>">
                             <?php echo $_SESSION['user_role'] ?>
                         </div>
-                    </span>
+                    </span> 
                 </div>
                 <ul tabindex="0" class="dropdown-content bg-base-200 z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <!-- <li><a href="/profile">Profile</a></li> -->
                     <li><a href="/logout">Logout</a></li>
                 </ul>
             </div>

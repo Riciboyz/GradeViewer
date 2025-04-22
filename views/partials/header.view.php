@@ -13,5 +13,4 @@
 </head>
 
 <body class="">
-    <!-- <?php var_dump($_SESSION); ?> -->
     <?php require_once "views/partials/navbar.view.php"; ?>

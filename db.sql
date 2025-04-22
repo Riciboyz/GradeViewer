@@ -14,7 +14,7 @@ CREATE TABLE users (
 
 
 
-
+ 
 
 INSERT INTO users (name, email, roles, password) VALUES
 ('teacher', 'teacher@example.com', 'teacher', 'teacher'),
